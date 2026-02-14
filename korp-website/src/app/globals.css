@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --korp-blue: #1e88e5;
+  --korp-blue-dark: #1565c0;
+  --korp-blue-light: #42a5f5;
+  --korp-green: #4caf50;
+  --korp-orange: #ff9800;
+  --korp-dark: #0a0e27;
+  --korp-darker: #070a1a;
+  --korp-light: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-korp-blue: var(--korp-blue);
+  --color-korp-blue-dark: var(--korp-blue-dark);
+  --color-korp-blue-light: var(--korp-blue-light);
+  --color-korp-green: var(--korp-green);
+  --color-korp-orange: var(--korp-orange);
+  --color-korp-dark: var(--korp-dark);
+  --color-korp-darker: var(--korp-darker);
+  --color-korp-light: var(--korp-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(30, 136, 229, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(30, 136, 229, 0.6); }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(to bottom, 
+    rgba(10, 14, 39, 0) 0%,
+    rgba(10, 14, 39, 0.3) 50%,
+    rgba(10, 14, 39, 0.8) 100%
+  );
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
