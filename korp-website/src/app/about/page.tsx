@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Building2, Target, Award, MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -107,11 +108,14 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <Building2 className="w-24 h-24 text-blue-500 mx-auto mb-4" />
-                  <p className="text-gray-500">KORP Software Office</p>
-                </div>
+              <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl overflow-hidden">
+                <Image
+                  src="/members.png"
+                  alt="KORP Software Team"
+                  width={600}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </div>

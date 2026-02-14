@@ -209,11 +209,11 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-gray-500 text-sm font-medium tracking-wider mb-4">
+          <span className="inline-block text-gray-500 text-base font-medium tracking-wider mb-4">
             Our Solutions
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
             Complete Suite of{" "}
             <span className="text-blue-600">Products</span>
           </h2>
@@ -237,12 +237,12 @@ export default function Services() {
                 <SolutionIllustration type={solution.illustration} />
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                   {solution.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-lg leading-relaxed mb-5">
                   {solution.description}
                 </p>
 

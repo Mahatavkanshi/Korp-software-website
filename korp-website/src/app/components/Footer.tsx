@@ -44,13 +44,25 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
+      {/* Bull Image Section */}
+      <div className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden">
+        <Image
+          src="/bull.png"
+          alt="Bull Market"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-3 mb-6">
-              <div className="relative w-12 h-12">
+            <Link href="/" className="flex items-center space-x-2 mb-4">
+              <div className="relative w-10 h-10">
                 <Image
                   src="/image.svg/korpsoftware.jpeg"
                   alt="KORP Software Logo"
@@ -64,16 +76,16 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-gray-400 mb-6 max-w-sm">
+            <p className="text-gray-400 text-sm mb-4 max-w-sm leading-relaxed">
               Complete back-office management solution for stock market members
               including Capital Market, F&O, Currency, Commodity, and Mutual Fund.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <a
                 href="tel:0120-4330960"
-                className="flex items-center text-gray-400 hover:text-white transition-colors"
+                className="flex items-center text-gray-400 hover:text-white transition-colors text-sm"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 0120-4330960
@@ -81,15 +93,15 @@ export default function Footer() {
 
               <a
                 href="mailto:kuldeep@korpsoft.com"
-                className="flex items-center text-gray-400 hover:text-white transition-colors"
+                className="flex items-center text-gray-400 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 kuldeep@korpsoft.com
               </a>
 
-              <div className="flex items-start text-gray-400">
-                <MapPin className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
-                <span>
+              <div className="flex items-start text-gray-400 text-sm">
+                <MapPin className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />
+                <span className="leading-relaxed">
                   1F-CS-20 Ansal Plaza, Sector 1,
                   <br />
                   Vaishali, Ghaziabad-201010
@@ -98,17 +110,17 @@ export default function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4 mt-6">
+            <div className="flex items-center space-x-3 mt-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#1e88e5] transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#1e88e5] transition-colors"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
@@ -116,13 +128,13 @@ export default function Footer() {
 
           {/* Solutions Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Solutions</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -133,13 +145,13 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <h3 className="text-base font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-base"
                   >
                     {link.name}
                   </Link>
@@ -150,13 +162,13 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Legal</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                    className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
                   >
                     {link.name}
                     <ExternalLink className="w-3 h-3 ml-1" />
@@ -168,7 +180,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-gray-800">
+        <div className="py-4 border-t border-gray-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} KORP SOFTWARE PVT. LTD. All rights
