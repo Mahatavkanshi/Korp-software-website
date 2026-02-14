@@ -39,7 +39,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="events" className="py-24 bg-white">
+    <section id="events" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -59,11 +59,8 @@ export default function Events() {
           </motion.span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Upcoming
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              {" "}
-              Events
-            </span>
+            Upcoming{" "}
+            <span className="text-purple-600">Events</span>
           </h2>
 
           <p className="text-lg text-gray-600">
@@ -93,12 +90,12 @@ export default function Events() {
                     {event.type}
                   </span>
                   <span
-                    className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                    className={`text-xs font-semibold px-3 py-1 rounded-full border ${
                       event.status === "Upcoming"
-                        ? "bg-green-100 text-green-700"
+                        ? "bg-green-500 text-white border-green-500"
                         : event.status === "Registration Open"
-                          ? "bg-blue-100 text-blue-700"
-                          : "bg-gray-100 text-gray-700"
+                          ? "bg-white text-purple-600 border-white"
+                          : "bg-white/20 text-white border-white/30"
                     }`}
                   >
                     {event.status}
@@ -107,7 +104,8 @@ export default function Events() {
 
                 <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
 
-                <div className="flex items-center space-x-4 text-white/80 text-sm">
+                <div className="flex items-center space-x-4 text-white/90 text-sm"
+                >
                   <span className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1" />
                     {event.date}
@@ -121,10 +119,11 @@ export default function Events() {
 
               {/* Content */}
               <div className="p-6">
-                <p className="text-gray-600 mb-4 leading-relaxed">{event.description}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed">{event.description}</p>
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center text-gray-500 text-sm">
+                  <div className="flex items-center text-gray-600 text-sm"
+>
                     <Users className="w-4 h-4 mr-1" />
                     {event.attendees}+ registered
                   </div>
@@ -152,7 +151,7 @@ export default function Events() {
         >
           <Link
             href="#contact"
-            className="inline-flex items-center space-x-2 text-[#1e88e5] font-semibold hover:text-[#1976d2] transition-colors"
+            className="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
           >
             <span>View All Events</span>
             <ArrowRight className="w-5 h-5" />

@@ -49,7 +49,7 @@ const jobs = [
 
 export default function Careers() {
   return (
-    <section id="careers" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="careers" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -63,17 +63,14 @@ export default function Careers() {
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-block bg-[#ff9800]/10 text-[#ff9800] text-sm font-semibold px-4 py-2 rounded-full mb-4"
+            className="inline-block bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-2 rounded-full mb-4"
           >
             Careers
           </motion.span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Join Our
-            <span className="bg-gradient-to-r from-[#ff9800] to-[#f57c00] bg-clip-text text-transparent">
-              {" "}
-              Team
-            </span>
+            Join Our{" "}
+            <span className="text-orange-500">Team</span>
           </h2>
 
           <p className="text-lg text-gray-600">
@@ -103,9 +100,9 @@ export default function Careers() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 * index }}
-              className="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100"
+              className="text-center p-6 bg-gray-50 rounded-2xl"
             >
-              <div className="text-[#ff9800] font-bold text-lg mb-1">{benefit.value}</div>
+              <div className="text-orange-600 font-bold text-lg mb-1">{benefit.value}</div>
               <div className="text-gray-600 text-sm">{benefit.label}</div>
             </motion.div>
           ))}
@@ -123,13 +120,12 @@ export default function Careers() {
               whileHover={{ scale: 1.02 }}
               className="group bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
-              >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 {/* Left - Job Info */}
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3"
                   >
-                    <span className="inline-flex items-center bg-[#ff9800]/10 text-[#ff9800] text-xs font-semibold px-3 py-1 rounded-full"
+                    <span className="inline-flex items-center bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full"
                     >
                       <Building className="w-3 h-3 mr-1" />
                       {job.department}
@@ -140,14 +136,14 @@ export default function Careers() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#ff9800] transition-colors"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors"
                   >
                     {job.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-4">{job.description}</p>
+                  <p className="text-gray-700 mb-4">{job.description}</p>
 
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500"
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600"
                   >
                     <span className="flex items-center">
                       <MapPin className="w-4 h-4 mr-1" />
@@ -167,7 +163,7 @@ export default function Careers() {
                 {/* Right - Apply Button */}
                 <Link
                   href="#contact"
-                  className="inline-flex items-center justify-center space-x-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-xl transition-all transform group-hover:scale-105 whitespace-nowrap"
+                  className="inline-flex items-center justify-center space-x-2 bg-gray-900 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-all transform group-hover:scale-105 whitespace-nowrap"
                 >
                   <span>Apply Now</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -186,12 +182,12 @@ export default function Careers() {
           className="mt-12 text-center"
         >
           <p className="text-gray-600 mb-4">
-            Don&#39;t see a position that fits? Send us your resume anyway!
+            Don't see a position that fits? Send us your resume anyway!
           </p>
 
           <Link
             href="#contact"
-            className="inline-flex items-center space-x-2 text-[#ff9800] font-semibold hover:text-[#f57c00] transition-colors"
+            className="inline-flex items-center space-x-2 text-orange-600 font-semibold hover:text-orange-700 transition-colors"
           >
             <span>Send Your Resume</span>
             <ArrowRight className="w-5 h-5" />
